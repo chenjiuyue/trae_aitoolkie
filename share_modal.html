@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分享邀请 - AI编程工具包</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; max-width: 500px; margin: 0 auto; padding: 20px; background-color: #f5f7fa; }
+        .modal-container { background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 25px; }
+        h2 { color: #1a1a1a; margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .invite-code { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0; font-family: 'Courier New', monospace; text-align: center; font-size: 18px; position: relative; }
+        .copy-btn { position: absolute; right: 10px; top: 10px; background: #007bff; color: white; border: none; border-radius: 4px; padding: 5px 10px; cursor: pointer; font-size: 14px; }
+        .copy-btn:hover { background: #0056b3; }
+        .invite-message { margin: 20px 0; line-height: 1.6; }
+        .share-buttons { margin-top: 20px; }
+        .share-link-container { display: flex; margin-bottom: 10px; }
+        .share-link { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 6px 0 0 6px; font-size: 14px; }
+        .share-btn { padding: 10px 15px; border: none; border-radius: 0 6px 6px 0; background: #646cff; color: white; cursor: pointer; font-size: 14px; }
+        .success-message { color: #07c160; margin-top: 10px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="modal-container">
+        <h2>邀请好友使用AI编程工具包</h2>
+        <div class="invite-message">
+            🔥 AI编程新体验！使用邀请码TCBAI666注册，立即解锁CloudBase AI Toolkit，新用户享12个月免费使用权！完成任务更有额外奖励，助力你的AI开发之旅！
+        </div>
+        <div class="invite-code">
+            TCBAI666
+            <button class="copy-btn" onclick="copyToClipboard('TCBAI666')">复制</button>
+        </div>
+        <div class="success-message" id="copySuccess">邀请码已复制到剪贴板！</div>
+        <div class="share-buttons">
+            <div class="share-link-container">
+                <input type="text" class="share-link" value="http://localhost:8000/share_modal.html" readonly>
+                <button class="share-btn" onclick="copyToClipboard(document.querySelector('.share-link').value)">复制链接</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const successEl = document.getElementById('copySuccess');
+                successEl.style.display = 'block';
+                setTimeout(() => { successEl.style.display = 'none'; }, 2000);
+            }).catch(err => {
+                console.error('复制失败: ', err);
+                alert('复制失败，请手动复制');
+            });
+        }
+    </script>
+</body>
+</html>
