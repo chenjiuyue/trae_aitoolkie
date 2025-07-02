@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奖励获取成功 - AI编程工具包</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; max-width: 500px; margin: 0 auto; padding: 20px; background-color: #f5f7fa; }
+        .modal-container { background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 30px; text-align: center; }
+        .success-icon { width: 60px; height: 60px; margin: 0 auto 20px; background: #07c160; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .success-icon::after { content: '✓'; color: white; font-size: 32px; font-weight: bold; }
+        h2 { color: #1a1a1a; margin: 0 0 20px; font-size: 22px; }
+        .reward-info { margin: 25px 0; line-height: 1.8; font-size: 16px; }
+        .expire-date { color: #646cff; font-weight: bold; }
+        .confirm-btn { background: #646cff; color: white; border: none; border-radius: 6px; padding: 12px 24px; font-size: 16px; cursor: pointer; margin-top: 15px; width: 100%; }
+        .confirm-btn:hover { background: #535bf2; }
+    </style>
+</head>
+<body>
+    <div class="modal-container">
+        <div class="success-icon"></div>
+        <h2>奖励获取成功</h2>
+        <div class="reward-info">
+            个人版 / 个人版（开发期）成功续期1个月<br>
+            套餐到期时间是：<span class="expire-date">xxxx年xx月xx号</span>
+        </div>
+        <button class="confirm-btn" onclick="window.close()">确定</button>
+    </div>
+</body>
+</html>
